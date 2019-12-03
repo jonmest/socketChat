@@ -6,7 +6,7 @@
     <title>Hello Bulma!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-
+    <script type="text/javascript" src="./Chat.js"></script>
 
     <template id="otherMessage">
             <div class="box has-background-grey-lighter">
@@ -28,10 +28,32 @@
     </template>
 
     <template id="messageContainer">
-            <section class="section" style="overflow-y: scroll; height: 500px;">
+            <section class="section" style="overflow-y: scroll; height: 300px;">
 
 </section>
     </template>
+
+    <template id="messageWritingArea">
+            <section class="section  is-paddingless">
+                <form>
+                    <textarea class="textarea" placeholder="e.g. Hello world"></textarea>
+                    <input class="button is-danger is-large is-fullwidth" type="submit" value="Submit input">
+                </form>
+            </section>
+    </template>
+
+    <template id="initArea">
+            <section class="section  is-paddingless">
+                    <p class="title">What should we call you?</p>
+                    <form>
+                    <input class="input" type="text" placeholder="Enter your name here">
+                    <br>
+                    <br>
+                    <input class="button is-danger is-large is-fullwidth" type="submit" value="Choose your nickname wisely...">
+                </form>
+                </section>
+    </template>
+    
   </head>
   <body>
   <section class="section">
@@ -40,103 +62,10 @@
             <div class="card-content">
 
                 
-                    <div class="chatBox">
-                            <section id="messageContainer" class="section" style="overflow-y: scroll; height: 500px;">
                     
-                                    <div class="box has-background-grey-lighter">
-                                            <article class="media">
-                            
-                                              <div class="media-content">
-                                                <div class="content">
-                                                        <strong id="displayName">John Smith</strong><br>
-                        
-                                                  <p>
-                                                    
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-                                                  </p>
-                                                </div>
-                        
-                                              </div>
-                                            </article>
-                                          </div>
-                              
-                                          <div class="box has-background-grey-lighter">
-                                                <article class="media">
-                                
-                                                  <div class="media-content">
-                                                    <div class="content">
-                                                            <strong id="displayName">John Smith</strong><br>
-                            
-                                                      <p>
-                                                        
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-                                                      </p>
-                                                    </div>
-                            
-                                                  </div>
-                                                </article>
-                                              </div>
-            
-            
-                                              <div class="box has-background-grey-lighter">
-                                                    <article class="media">
-                                    
-                                                      <div class="media-content">
-                                                        <div class="content">
-                                                                <strong id="displayName">John Smith</strong><br>
-                                
-                                                          <p>
-                                                            
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-                                                          </p>
-                                                        </div>
-                                
-                                                      </div>
-                                                    </article>
-                                                  </div><div class="box has-background-grey-lighter">
-                                                        <article class="media">
-                                        
-                                                          <div class="media-content">
-                                                            <div class="content">
-                                                                    <strong id="displayName">John Smith</strong><br>
-                                    
-                                                              <p>
-                                                                
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-                                                              </p>
-                                                            </div>
-                                    
-                                                          </div>
-                                                        </article>
-                                                      </div><div class="box has-background-grey-lighter">
-                                                            <article class="media">
-                                            
-                                                              <div class="media-content">
-                                                                <div class="content">
-                                                                        <strong id="displayName">John Smith</strong><br>
-                                        
-                                                                  <p>
-                                                                    
-                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-                                                                  </p>
-                                                                </div>
-                                        
-                                                              </div>
-                                                            </article>
-                                                          </div>
-            </section>
-    
-            <section id="inputContainer" class="section  is-paddingless">
-    
-                    <textarea class="textarea" placeholder="e.g. Hello world"></textarea>
-                    <input class="button is-danger is-large is-fullwidth" type="submit" value="Submit input">
-                  </section>
-    
-                  
-                    </div>
 
 
-       
+       <chat-element></chat-element>
             </div>
             </div>
           </div>
